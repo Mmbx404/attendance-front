@@ -1,0 +1,7 @@
+{
+  "name": "attendance-front2.1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
