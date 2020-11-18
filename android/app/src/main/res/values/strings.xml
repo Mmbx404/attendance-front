@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">attendance</string>
+    <string name="title_activity_main">attendance</string>
+    <string name="package_name">com.fpmpm.attendance</string>
+    <string name="custom_url_scheme">com.fpmpm.attendance</string>
+    <string name="server_client_id">469802607999-hkrq68uus45jlbdoic6lpcp7f7ccsftm.apps.googleusercontent.com</string>
+</resources>

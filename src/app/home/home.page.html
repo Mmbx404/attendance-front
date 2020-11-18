@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
+  <meta name="google-signin-client_id" content="469802607999-eeqabie4pldo5f8o81194n0np6ppkmmj.apps.googleusercontent.com">
   <ion-toolbar>
     <ion-title>
       Blank
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -17,4 +17,11 @@
     <strong>Ready to create an app?</strong>
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
+  <ion-button (click)="googleSingIn()">Sing in with google</ion-button>
+  <ion-card>
+    <ion-card-content>
+      {{ userInfo}}
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
