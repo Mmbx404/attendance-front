@@ -18,6 +18,7 @@
     <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
   <ion-button (click)="googleSingIn()">Sing in with google</ion-button>
+  <ion-button [routerLink]="['/qrcode']">Go to detail</ion-button>
   <ion-card>
     <ion-card-content>
       {{ userInfo}}

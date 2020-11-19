@@ -1,1 +1,18 @@
-{}
+{
+  "appId": "com.fpmpm.attendance",
+  "appName": "attendance",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "GoogleAuth": {
+      "scopes": ["email"],
+      "serverClientId": "469802607999-eeqabie4pldo5f8o81194n0np6ppkmmj.apps.googleusercontent.com",
+      "forceCodeForRefreshToken": true
+    }
+  },
+  "cordova": {}
+}

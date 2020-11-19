@@ -16,6 +16,7 @@ import {
   NG_GAPI_CONFIG,
   GoogleApiConfig
 } from "ng-gapi";
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 
 let gapiClientConfig: NgGapiClientConfig = {
   client_id: "469802607999-eeqabie4pldo5f8o81194n0np6ppkmmj.apps.googleusercontent.com",
@@ -35,6 +36,7 @@ let gapiClientConfig: NgGapiClientConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    BarcodeScanner,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
