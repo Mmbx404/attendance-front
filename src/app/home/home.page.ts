@@ -13,6 +13,9 @@ export class HomePage {
 
   public static SESSION_STORAGE_KEY: string = 'accessToken';
   userInfo = null;
+  userAccessToken = null;
+  userAccessTokenId = null;
+  userServerAuthCode = null;
   user : any;
   googleUser : any;
 
@@ -24,7 +27,8 @@ export class HomePage {
     sessionStorage.setItem(
         HomePage.SESSION_STORAGE_KEY, res.getAuthResponse().access_token
     );
-    this.userInfo = res.tt.$t;
+    //this.userInfo = res.tt.$t;
+    this.userInfo = res;
 }
 
   async googleSingIn() {
@@ -35,7 +39,10 @@ export class HomePage {
    try { 
     this.googleUser = await Plugins.GoogleAuth.signIn(null);
     console.log('user :', this.googleUser);
-   this.userInfo = this.googleUser.email; }
+  this.userInfo = this.googleUser.email; 
+  this.userAccessToken = this.googleUser.authentication.accessToken;
+  this.userAccessTokenId = this.googleUser.authentication.idToken;
+}
    catch (err) {
      console.log(err);
      this.userInfo = Plugins.GoogleAuth.signIn(null)
