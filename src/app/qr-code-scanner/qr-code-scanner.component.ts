@@ -9,6 +9,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 export class QrCodeScannerComponent implements OnInit {
 
   scanResult : String;
+  scanned : Boolean = false;
 
   constructor(private barcodeScanner: BarcodeScanner) { }
 
@@ -19,6 +20,7 @@ export class QrCodeScannerComponent implements OnInit {
     this.barcodeScanner.scan().then(barcodeData => {
       this.scanResult = barcodeData.text;
       console.log('Barcode data', barcodeData);
+      this.scanned = true;
      }).catch(err => {
          console.log('Error', err);
      });

@@ -1,8 +1,17 @@
+<ion-header [translucent]="true" >
+  <meta name="google-signin-client_id" content="469802607999-eeqabie4pldo5f8o81194n0np6ppkmmj.apps.googleusercontent.com">
+  <ion-toolbar class="background2">
+   <img id="img1" src="../../assets/icon/uca4.png" >
+  </ion-toolbar>
+</ion-header>
 <ion-content class="background">
-  <p>
-    qr-code-scanner works!
-  </p>
-  <ion-button (click)="startScan()"></ion-button>
-  <p>{{ scanResult }}</p>
+  <div id="container" style="margin-left: 35%;margin-top: 25%;">
+    <p> Scan result : {{ scanResult }} </p>
+ <!--  <p style="color: green;" *ngIf="scanned">User scanned susccesfully, Scan result : {{ scanResult }}</p>
+    <p style="color: red;" *ngIf="scanned">Error !!, Scan result : {{ scanResult }}</p> --> 
+  </div>
+  <div id="container" style="margin-left: 30%;margin-top: 60%;">
+    <ion-button size="large" (click)="startScan()">Scan Qr Code</ion-button>
+  </div>
 </ion-content>
 
