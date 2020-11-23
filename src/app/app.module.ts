@@ -25,6 +25,7 @@ let gapiClientConfig: NgGapiClientConfig = {
     "email"
   ].join(" ")
 };
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,7 +33,7 @@ let gapiClientConfig: NgGapiClientConfig = {
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,GoogleApiModule.forRoot({
     provide: NG_GAPI_CONFIG,
     useValue: gapiClientConfig
-  }),],
+  }),HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,

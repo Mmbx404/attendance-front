@@ -4,6 +4,7 @@ import { Plugins } from '@capacitor/core';
 import { GoogleApiService, GoogleAuthService } from 'ng-gapi';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Router } from '@angular/router';
+import { JwtServiceService } from '../service/jwt-service.service';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,8 @@ export class HomePage {
   userServerAuthCode = null;
   user : any;
   googleUser : any;
+
+  private jwtService : JwtServiceService;
 
   constructor(private gapiService : GoogleApiService,private googleAuth : GoogleAuthService,private router: Router) {
   }
@@ -48,7 +51,10 @@ export class HomePage {
      console.log(err);
      this.userInfo = Plugins.GoogleAuth.signIn(null)
    } 
-   // this if condition will be changed to when the JWT is set
+   // this if condition will be used when back-end is ready
+  /* if (this.jwtService.getToken != null) {
+    this.router.navigate(['/qrcode']);
+   } */
    if (this.userInfo != null) {
      this.router.navigate(['/qrcode']);
    }
